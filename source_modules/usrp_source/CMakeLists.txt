@@ -7,9 +7,9 @@ include(${SDRPP_MODULE_CMAKE})
 
 if (MSVC)
     # Lib path
-    target_link_directories(usrp_source PRIVATE "C:/Program Files/PothosSDR/bin/")
+    target_link_directories(usrp_source PRIVATE "%UserProfile%/radioconda/bin/")
 
-    target_include_directories(usrp_source PRIVATE "C:/Program Files/PothosSDR/include/")
+    target_include_directories(usrp_source PRIVATE "%UserProfile%/radioconda/include/")
 
     target_link_libraries(usrp_source PRIVATE uhd)
 else (MSVC)

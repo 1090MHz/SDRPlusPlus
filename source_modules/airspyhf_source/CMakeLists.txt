@@ -7,9 +7,9 @@ include(${SDRPP_MODULE_CMAKE})
 
 if (MSVC)
     # Lib path
-    target_link_directories(airspyhf_source PRIVATE "C:/Program Files/PothosSDR/bin/")
+    target_link_directories(airspyhf_source PRIVATE "%UserProfile%/radioconda/bin/")
 
-    target_include_directories(airspyhf_source PUBLIC "C:/Program Files/PothosSDR/include/libairspyhf/")
+    target_include_directories(airspyhf_source PUBLIC "%UserProfile%/radioconda/include/libairspyhf/")
 
     target_link_libraries(airspyhf_source PRIVATE airspyhf)
 elseif (ANDROID)
